@@ -1,10 +1,5 @@
 import React from 'react';
-
-interface ItemProps {
-    hasItem: boolean;
-    clicked: boolean;
-    onClick: () => void;
-}
+import {ItemProps} from '../types.ts';
 
 const Item: React.FC<ItemProps> = ({onClick, clicked, hasItem}) => {
     return (

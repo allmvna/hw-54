@@ -1,6 +1,6 @@
 import './App.css';
 import {useState} from "react";
-import Item from './components/Item';
+import GameField from './components/GameField';
 
 const createItems = () => {
     const items = Array.from({ length: 36 }, () => ({
@@ -25,14 +25,7 @@ const App = () => {
 
     return (
         <div className="App">
-            {items.map((item, index) => (
-                <Item
-                    key={index}
-                    hasItem={item.hasItem}
-                    clicked={item.clicked}
-                    onClick={() => handleItemClick(index)}
-                />
-            ))}
+                <GameField items={items} onItemClick={handleItemClick} />
         </div>
     );
 };
