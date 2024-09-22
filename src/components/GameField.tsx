@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from './components/Item';
-import {FieldProps} from './types';
+import {FieldProps} from '../types';
 
 
 const GameField: React.FC<FieldProps>= ({items, onItemClick}) => {
