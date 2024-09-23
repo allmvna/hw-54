@@ -4,9 +4,10 @@ export interface Item {
 }
 
 export interface ItemProps {
-    onClick: () => void;
+    onClick: (index: number) => void;
     clicked: boolean;
     hasItem: boolean;
+    index: number;
 }
 
 export interface FieldProps {
@@ -16,4 +17,8 @@ export interface FieldProps {
 
 export interface AttemptCountProps {
     attempts: number;
+}
+
+export interface ResetGameProps {
+    onResetGame: () => void;
 }

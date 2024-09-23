@@ -1,11 +1,13 @@
 import React from 'react';
 import {AttemptCountProps} from '../types';
+import {Typography} from '@mui/material';
 
 const AttemptCount : React.FC<AttemptCountProps> = ({attempts}) => {
     return (
-        <div>
-            <p>Number of attempts: {attempts}</p>
-        </div>
+        <Typography variant="h6" textAlign= 'center'>
+          Количество попыток: {attempts}
+        </Typography>
+
     );
 };
 

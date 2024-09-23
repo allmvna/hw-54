@@ -1,20 +1,20 @@
 import React from 'react';
-import Item from './components/Item';
+import Item from './Item';
 import {FieldProps} from '../types';
 
 
 const GameField: React.FC<FieldProps>= ({items, onItemClick}) => {
     return (
-        <div>
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
             {items.map((item, index) => (
                 <Item
                     key={index}
+                    index={index}
                     hasItem={item.hasItem}
                     clicked={item.clicked}
-                    onClick={() => onItemClick(index)}
+                    onClick={onItemClick}
                 />
             ))}
-            
         </div>
     );
 };

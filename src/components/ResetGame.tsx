@@ -1,10 +1,12 @@
 import React from 'react';
+import {ResetGameProps} from '../types';
+import {Button} from '@mui/material';
 
-const ResetGame = ({onResetGame}) => {
+const ResetGame: React.FC<ResetGameProps> = ({onResetGame}) => {
     return (
-        <div>
-            <button onClick={onResetGame}>Reset</button>
-        </div>
+        <Button variant="contained" color="primary" onClick={onResetGame}>
+            Сбросить
+        </Button>
     );
 };
 
